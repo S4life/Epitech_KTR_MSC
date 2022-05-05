@@ -2,7 +2,6 @@
 
 # Saad MOHAMMAD : Test KTR for MSc PRO
 
----as soon i started, i had to leave for a family matter, i bearly had an hour to do what i did (incomplete)---
 
 For the entry test, i decided to go with Symfony framework(PHP) since i've been learning it for a month now. 
 
@@ -35,4 +34,6 @@ Configuration :
     - symfony console make:migration
     - symfony console doctrine:migration:migrate
 
-If i'm not forgetting anything, the application should be able to run
+If i'm not forgetting anything, the application should be able to run. You may even use symfony's integrated server by using typing "symfony serve"
+
+Thanks alot for the opportunity, hopping to join you soon :)
