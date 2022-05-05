@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UserController!
+{% endblock %}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+	</style>
+	{% if app.user %}
+		<div class="example-wrapper">
+			<h1>Welcome
+				{{ app.user.name }}!
+			</h1>
+		</div>
+
+
+		<table class="table">
+			<tbody>
+
+				<tr>
+					<th>Email</th>
+					<td>{{ app.user.email }}</td>
+				</tr>
+				<tr>
+					<th>Password</th>
+					<td>{{ app.user.password }}</td><br>
+					<td>
+						<span style="color:red">This is hashed for security purposes!</span>
+					</td>
+				</tr>
+				<tr>
+					<th>Name</th>
+					<td>{{ app.user.Name }}</td>
+				</tr>
+				<tr>
+					<th>Company</th>
+					<td>{{ app.user.Company }}</td>
+				</tr>
+				<tr>
+					<th>Telephone</th>
+					<td>{{ app.user.telephone }}</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<a href="{{ path('app_share') }}">Want to Share?</a><br>
+
+		<a href="{{ path('app_business') }}">see business card liste</a>
+
+
+	{% else %}
+		<h1>
+			<span style="color:red">WARNING :</span><br>You are tring to get into a page which requires authentification !
+		</h1>
+		You may either
+		<li id="menu-item-538" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-415 current_page_item menu-item-538">
+			<a href="{{ path('app_login') }}">Sign in</a>
+			<br>Or create your account by clicking on "Inscription" below
+		</li>
+		<li id="menu-item-538" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-415 current_page_item menu-item-538">
+			<a href="{{ path('register') }}">Inscription</a>
+		{% endif %}
+	{% endblock %}

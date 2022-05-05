@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User index
+{% endblock %}
+
+{% block body %}
+
+
+	<body>
+		<div class="content">
+			<div class="col-md-6">
+				<h3 style="text-align: center">
+					Welcome to your Library
+				</h3><hr/></div>
+
+			<div class="col-md-6">
+				<form>
+					{% for user in users %}
+						<div class="form-group">
+							<label for="fullName">Name</label>
+							<input type="name" class="form-control" id="full_usr_name" maxlength="64" aria-describedby="Name" value="{{ app.user.name}}" readonly>
+						</div><br>
+						<div class="form-group">
+							<label for="companyName">Company</label>
+							<input type="name" class="form-control" id="company_usr_name" maxlength="64" aria-describedby="Company" value="{{ app.user.company}}" readonly>
+						</div><br>
+						<div class="form-group">
+							<label for="emailAdress">Email</label>
+							<input type="email" class="form-control" aria-describedby="Email" value="{{ app.user.email}}" readonly>
+						</div><br>
+						<div class="form-group">
+							<label for="phoneNumber">Phonen number</label>
+							<input type="phone" class="form-control" id="usr_phone_number" aria-describedby="Phone" value="{{ app.user.telephone}}" readonly>
+						</div><br>
+						<button type="submit" class="btn btn-primary">Exchange info</button>
+						<a href="{{ path('app_user') }}" class="btn btn-primary" style="background-color:grey">Back to profile</a>
+					{% endfor %}
+				</form>
+			</div>
+		</div>
+	</body>
+</body></div></body>{% endblock %}

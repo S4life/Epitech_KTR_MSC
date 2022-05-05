@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!
+{% endblock %}
+
+{% block body %}
+<style>
+	.example-wrapper {
+		margin: 1em auto;
+		max-width: 800px;
+		width: 95%;
+		font: 18px / 1.5 sans-serif;
+	}
+</style>
+<div style="text-align: center">
+	<h1>Welcome to Epitech<hr/></h1>
+</div>
+<div>
+	<h4>
+		{% if app.user %}
+			<a style="color:green" href="{{ path('app_user') }}">
+				<b><</b>Back&nbsp;to&nbsp;your&nbsp;profile&nbsp;page</h4></div> {% endif %} {% endblock %}

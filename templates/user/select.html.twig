@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User index
+{% endblock %}
+
+{% block body %}
+	<h1>Select the user with whome would you like to share info<hr/></h1>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Name</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for user in users %}
+				<tr>
+					<td>
+						<h5 style="color:brown">{{ user.Name }}</h5>
+					</td>
+					<td>
+						<a href="{{ path('app_selected', {'id': user.id}) }}">Select</a>
+
+					</td>
+				</tr>
+			{% else %}
+				<tr>
+					<td colspan="8">no records found</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+{% endblock %}

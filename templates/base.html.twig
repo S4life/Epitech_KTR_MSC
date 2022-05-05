@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+		{% block stylesheets %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+		<link rel="stylesheet" id="google-webfonts-css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C700%2C900%7CCabin%3A400%2C700%2C400italic%2C700italic%7CHerr+Von+Muellerhoff" type="text/css" media="all">
+		<link rel="stylesheet" id="wpgrade-main-style-css" href="https://etoiledor.com/wp-content/themes/rosa/assets/css/style.css" type="text/css" media="all">
+
+	</head>
+
+
+	<div class="container">
+		<div class="flexbox">
+			<nav class="navigation  navigation--main" id="js-navigation--main">
+				<h2 class="accessibility">Navigation principale</h2>
+				<ul id="menu-main-menu" class="nav  nav--main  nav--items-menu">
+					<li id="menu-item-1924" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1924"></li>
+					<li id="menu-item-538" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-540">
+						<a href="{{ path('home') }}">Home</a>
+					</li>
+				</li>
+				{% if app.user %}
+					<li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-540">
+						<a href="{{ path('contact') }}">Contact</a>
+					</li>
+					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-540">
+						&nbsp;<span style="color:green">
+							<a href="{{ path('app_user') }}">
+								{{ app.user.name |upper }}
+							</span>
+						</li>
+					</li>
+				</a>
+			</li>
+			<li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-540">
+				<a href="{{ path('app_logout') }}">Logout</a>
+			</li>
+
+		{% else %}
+			<li id="menu-item-538" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-415 current_page_item menu-item-538">
+				<a href="{{ path('app_login') }}">Sign in</a>
+			</li>
+			<li id="menu-item-538" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-415 current_page_item menu-item-538">
+				<a href="{{ path('register') }}">Sign Up</a>
+			</li>
+			<li id="menu-item-540" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-540">
+				<a href="{{ path('contact') }}">Contact</a>
+			</li>
+		{% endif %}
+	</ul>
+</html></nav></div></div><body>{% block body %}{% endblock %}</body><header id="post-418-title" class="article__header  article__header--page two-thirds-height" data-type="image"><div class="flexbox"><div class="flexbox__item">
+<hgroup class="article__headline">
+	<h2 class="headline__secondary" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+		<span class="first-letter">E</span>
+		pitech</h2><br><br>
+	<h1 class="headline__primary" style="color:green; ">McS Pro</h1>
+</hgroup></div></div></header><!-- footer --><footer class="site-footer  border-waves-bottom"><div class="copyright-area copyright-area__accent"><svg class="blurp--bottom" width="192" height="61" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 160.7 61.5" enable-background="new 0 0 160.7 61.5" xml:space="preserve" style="transform: matrix(0.5, 0, 0, 0.5, 0, 40);">
+<path fill="#FFFFFF" d="M80.3,61.5c0,0,22.1-2.7,43.1-5.4s41-5.4,36.6-5.4c-21.7,0-34.1-12.7-44.9-25.4S95.3,0,80.3,0c-15,0-24.1,12.7-34.9,25.4S22.3,50.8,0.6,50.8c-4.3,0-6.5,0,3.5,1.3S36.2,56.1,80.3,61.5z"></path></svg><div class="btn--top">
+<a href="#" class="btn--top_text">
+	<span class="btn__arrow btn__arrow--top" style="opacity: 0; transform: matrix(0.70711, 0.7071, -0.7071, 0.70711, -5, 15);"></span>
+	<span class="btn__arrow btn__arrow--bottom" style="opacity: 0; transform: matrix(0.70711, 0.7071, -0.7071, 0.70711, -5, 15);"></span>
+</a></div><div class="container">
+<div class="footer-container">
+	<div class="copyright-text">
+		© Saad MOHAMMAD -&nbsp;{{ "now"|date("Y")}}
+		&nbsp; &nbsp; •  &nbsp; &nbsp; Tel: 06 XX 64 XX XX
+	</div>
+
+</div></div></div></footer><!-- footer --></html>
