@@ -30,7 +30,7 @@ Configuration :
     - Add : DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/epitech_ktr?serverVersion=5.7&charset=utf8mb4"  (or any other database)
     - [x] use your local server credentials (db_user, db_password) and make sure that the port 3306 corresponds to your MySQL port if not change it
 
-4. Run on commande line :
+4. Run on commande line : (make sur you are on the current project)
     - symfony console doctrine:database:create
     - symfony console make:migration
     - symfony console doctrine:migration:migrate
